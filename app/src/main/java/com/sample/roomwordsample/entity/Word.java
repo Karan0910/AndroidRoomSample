@@ -9,20 +9,28 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "table_word")
 public class Word {
 
+    public Word(String mWord){
+        this.mWord=mWord;
+    }
     @NonNull
-    @ColumnInfo(name = "word")
-    private String mWord;
-
-    @PrimaryKey(autoGenerate = true)
-    private int id;
-
     public String getmWord() {
         return mWord;
     }
 
-    public void setmWord(String mWord) {
-        this.mWord = mWord;
+    public int getId() {
+        return id;
     }
+
+    @NonNull
+    @ColumnInfo(name = "word")
+    public String mWord;
+
+
+    @PrimaryKey(autoGenerate = true)
+    public int id;
+
+
+
 
 
 }
