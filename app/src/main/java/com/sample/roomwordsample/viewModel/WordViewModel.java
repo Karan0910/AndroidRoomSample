@@ -29,4 +29,5 @@ public class WordViewModel extends AndroidViewModel {
     public void insertWord(Word word){
         repository.insert(word);
     }
+
 }
